@@ -36,13 +36,13 @@ function escapeUnderscore(text: string): string {
 
 // 主菜单
 const menu = new Menu("root")
-  .submenu("官方客服", "serviecs").row()
-  .url("官方频道", "https://t.me/aipushai").row();
+  .submenu("官方客服(Customer Service)", "serviecs").row()
+  .url("官方频道(Official Channel)", "https://t.me/aipushai").row();
 
 // 官方客服子菜单
 const services = new Menu("serviecs")
-    .url("官方客服", "https://t.me/aipushai888").row()
-    .back("返回");
+    .url("官方客服(Customer Service)", "https://t.me/aipushai888").row()
+    .back("返回(Back)");
 
 menu.register(services);
 bot.use(menu);
@@ -194,7 +194,7 @@ bot.on("message", async (ctx) => {
         const messageToAdmin = isChatActive || isRequest;
 
         if (!messageToAdmin && isWait) {
-            await ctx.reply("消息已发送，请等待 \n  ");
+            await ctx.reply("消息已发送，请等待 \n The message has been sent. Please wait a moment. \n ");
             return;
         }
 
@@ -237,11 +237,11 @@ bot.on("message", async (ctx) => {
             }
             if (!isChatActive) {
                 await kv.set(['chat_wait', userId], { timestamp: Date.now() }, { expireIn: waitTime });
-                await ctx.reply("消息已发送至专属客服，请耐心等待❤");
+                await ctx.reply("消息已发送至专属客服，请耐心等待❤ \n Your message has been sent to your dedicated customer service representative. \n Please wait a moment.❤");
             }
         } catch (error) {
             console.error("发送至管理员失败", error);
-            await ctx.reply("当前服务繁忙，请点击下方按钮联系客服", { reply_markup: services });
+            await ctx.reply("当前服务繁忙，请点击下方按钮联系客服 \n Our service is currently busy. Please click the button below to contact customer service.", { reply_markup: services });
         }
     }
 });
