@@ -128,7 +128,7 @@ bot.command("start", async (ctx) => {
             });
         }
         // await ctx.replyWithPhoto("https://ibb.co/5hJhZPR4");
-        await ctx.reply("您好,点击下方按钮可跳转至官方链接。\n（双向请回复‘人工’，我们会为您安排专属客服提供1对1支持❤）\n Hello, click the button below to go to the official link. \n If you encounter sending restrictions, please reply with “人工,” and we’ll assign a dedicated customer service representative to provide you with one-on-one support ❤ ", { reply_markup: menu });
+        await ctx.reply("您好,点击下方按钮可跳转至官方链接。\n（双向请回复‘人工’，我们会为您安排专属客服提供1对1支持❤）\n Hello, click the button below to go to the official link. \n If you encounter sending restrictions, please reply with “人工”, and we’ll assign a dedicated customer service representative to provide you with one-on-one support ❤ ", { reply_markup: menu });
     }
 });
 
