@@ -37,11 +37,11 @@ function escapeUnderscore(text: string): string {
 // 主菜单
 const menu = new Menu("root")
   .submenu("官方客服", "serviecs").row()
-  .url("官方频道", "https://t.me/WorldFilterCenter").row();
+  .url("官方频道", "https://t.me/aipushai").row();
 
 // 官方客服子菜单
 const services = new Menu("serviecs")
-    .url("官方客服", "https://t.me/Wolfe2026").row()
+    .url("官方客服", "https://t.me/aipushai888").row()
     .back("返回");
 
 menu.register(services);
