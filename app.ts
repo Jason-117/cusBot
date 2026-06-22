@@ -111,6 +111,7 @@ bot.callbackQuery("cancel_reply", async (ctx) => {
 
 // 处理 start
 bot.command("start", async (ctx) => {
+    console.log("触发start");
     if (ctx.from?.id == admin_id) {
         await ctx.reply("管理员");
     } else {
