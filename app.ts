@@ -248,8 +248,8 @@ bot.on("message", async (ctx) => {
     }
 });
 
-Deno.addSignalListener("SIGINT", () => bot.stop());
-Deno.addSignalListener("SIGTERM", () => bot.stop());
+// Deno.addSignalListener("SIGINT", () => bot.stop());
+// Deno.addSignalListener("SIGTERM", () => bot.stop());
 
 // 处理 /users 路径
 async function handleUsersRequest(req: Request): Promise<Response> {
